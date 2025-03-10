@@ -58,7 +58,7 @@ CREATE TABLE recharges (
     oldBalance DECIMAL(10,2) NOT NULL,
     newBalance DECIMAL(10,2) NOT NULL,
     method ENUM('ATM', 'CARD') NOT NULL,
-    status ENUM('Thành công', 'Đang chờ') DEFAULT 'Đang chờ',
+    status ENUM('Thành công', 'Đang chờ', 'Thất bại') DEFAULT 'Đang chờ',
     created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (userId) REFERENCES users(id) ON DELETE CASCADE
