@@ -1,3 +1,5 @@
+import 'module-alias/register';
+
 import express, { Request, Response } from 'express';
 import { routers } from './apps/router';
 import * as dotenv from 'dotenv';
@@ -11,7 +13,7 @@ app.use(express.json());
 app.use(
     cors({
         credentials: true,
-        origin: 'http://localhost:3000',
+        origin: ['http://localhost:3000', 'http://103.56.163.248:3000'],
     })
 );
 routers(app);

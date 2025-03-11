@@ -1,23 +1,20 @@
-# Sử dụng Node.js LTS làm base image
+# Sử dụng Node.js phiên bản LTS
 FROM node:20
 
-# Đặt thư mục làm việc trong container
+# Thiết lập thư mục làm việc trong container
 WORKDIR /app
 
-# Copy package.json và package-lock.json trước để tối ưu hóa layer caching
-COPY package*.json ./
+# Sao chép package.json và package-lock.json vào container
+COPY package.json ./
 
-# Cài đặt dependencies
-RUN npm install
+# Cài đặt module-alias để hỗ trợ alias
+RUN npm install module-alias
 
-# Copy toàn bộ mã nguồn vào container
+# Sao chép toàn bộ source code vào container
 COPY . .
 
-# Biên dịch TypeScript sang JavaScript
-#RUN npm run build
+# Build TypeScript sang JavaScript
+RUN npm run build
 
-# Expose cổng server chạy
-EXPOSE 3100
-
-# Lệnh chạy ứng dụng
-CMD ["npm", "run", "dev"]
+# Chạy ứng dụng
+CMD ["node", "dist/index.js"]
