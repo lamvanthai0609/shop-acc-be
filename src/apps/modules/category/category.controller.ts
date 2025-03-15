@@ -7,3 +7,5 @@ export class CategoryController extends GeneralController<Category> {
         super(new CategoryService());
     }
 }
+
+export const categoryController = new CategoryController();

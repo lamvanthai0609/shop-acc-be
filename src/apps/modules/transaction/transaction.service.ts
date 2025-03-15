@@ -1,4 +1,5 @@
-﻿import { AccountGeneralInfoService } from '../account-general-info';
+﻿import { AppError } from '@/libs/utils/error';
+import { AccountGeneralInfoService } from '../account-general-info';
 import { MySQLTransaction } from '../common/transactiondb';
 import { GeneralService } from '../general';
 import { UserService } from '../user';
@@ -20,45 +21,40 @@ export class TransactionService extends GeneralService<Transaction> {
 
     public async buyAccount(data: BuyAccountRequest) {
         if (!data.userId || !data.accountId) {
-            throw new Error('Invalid data');
+            throw new AppError('Unauthorized', 401);
         }
         const { userId, accountId } = data;
         const user = await this.userService.findById(userId);
         const account = await this.accountService.findById(accountId);
 
         if (!user || !account) {
-            throw new Error('User or Account Not found');
+            throw new AppError('Tài khoản hoặc người dùng không tồn tại', 400);
         }
 
         if (user.balance < account.price) {
-            throw new Error('Not enough balance');
+            throw new AppError('Bạn không đủ tiền', 400);
+        }
+
+        if (account.status === 'Đã bán') {
+            throw new AppError('Tài khoản đã bán', 400);
         }
 
         user.balance -= account.price;
-        const userUpdate = await this.userService.updateBalance(
-            userId,
-            user.balance
-        );
-        if (!userUpdate) {
-            throw new Error('Update balance failed');
-        }
-
         this.transactionDB.begin();
-
         try {
             const updateBalanceUser = await this.userService.updateBalance(
                 userId,
                 user.balance
             );
             if (!updateBalanceUser) {
-                throw new Error('Update balance failed');
+                throw new AppError('Mua tài khoản thất bại', 500);
             }
             const updateStatusAccount = await this.accountService.update(
                 accountId,
                 { status: 'Đã bán' }
             );
             if (!updateStatusAccount) {
-                throw new Error('Update status account failed');
+                throw new AppError('Mua tài khoản thất bại', 500);
             }
             const transaction = await this.transactionModel.save({
                 userId,
@@ -69,7 +65,7 @@ export class TransactionService extends GeneralService<Transaction> {
             });
 
             if (!transaction) {
-                throw new Error('Transaction failed');
+                throw new AppError('Mua tài khoản thất bại', 500);
             }
 
             this.transactionDB.commit();
@@ -78,5 +74,12 @@ export class TransactionService extends GeneralService<Transaction> {
             this.transactionDB.rollback();
             throw error;
         }
+    }
+
+    public async findByUser(userId: number) {
+        if (!userId) {
+            throw new Error('Invalid data');
+        }
+        return this.transactionModel.findByUser(userId);
     }
 }

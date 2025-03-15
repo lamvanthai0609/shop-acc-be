@@ -3,7 +3,7 @@ import { GeneralController } from '../general';
 import { Transaction } from './transaction.entity';
 import { TransactionService } from './transaction.service';
 import { ResponseApp } from '@/libs/utils/response';
-import { IAppError } from '@/libs/utils/error';
+import { AppError, IAppError } from '@/libs/utils/error';
 import { BuyAccountRequest } from './transaction.interface';
 
 export class TransactionController extends GeneralController<Transaction> {
@@ -13,6 +13,7 @@ export class TransactionController extends GeneralController<Transaction> {
         super(transactionService);
         this.transactionService = transactionService;
         this.postBuyAccount = this.postBuyAccount.bind(this);
+        this.findByUser = this.findByUser.bind(this);
     }
 
     public async postBuyAccount(
@@ -30,10 +31,22 @@ export class TransactionController extends GeneralController<Transaction> {
             const dataBody = req.body;
 
             if (Number(params?.id || 0) !== dataBody.userId) {
-                throw new Error('Unauthorized');
+                throw new AppError('Unauthorized', 401);
             }
 
             const data = await this.transactionService.buyAccount(dataBody);
+            ResponseApp.ok(res, data);
+        } catch (error) {
+            ResponseApp.failed(res, error as IAppError);
+        }
+    }
+
+    public async findByUser(req: Request, res: Response) {
+        try {
+            const params = req.params;
+            const data = await this.transactionService.findByUser(
+                Number(params.id || 0)
+            );
             ResponseApp.ok(res, data);
         } catch (error) {
             ResponseApp.failed(res, error as IAppError);

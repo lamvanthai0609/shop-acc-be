@@ -7,3 +7,5 @@ export class ServiceController extends GeneralController<Service> {
         super(new ServiceService());
     }
 }
+
+export const serviceController = new ServiceController();

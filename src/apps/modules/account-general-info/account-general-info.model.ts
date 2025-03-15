@@ -25,7 +25,7 @@ export class AccountGeneralInfoModel extends GeneralModel<AccountGeneralInfo> {
         const select = Object.values(field).join(', ');
 
         const [rows] = await db.query(
-            `SELECT SUBSTRING_INDEX(agi.images, ';', 1) AS image, ${select} FROM ${Table.ACCOUNT_GENERAL_INFORMATION} agi JOIN ${Table.CATEGORY} c ON agi.categoryId = c.id WHERE c.slug = '${slug}'`
+            `SELECT SUBSTRING_INDEX(agi.images, ';', 1) AS image, ${select} FROM ${Table.ACCOUNT_GENERAL_INFORMATION} agi JOIN ${Table.CATEGORY} c ON agi.categoryId = c.id WHERE c.slug = '${slug}' and agi.status = 'Còn hàng'`
         );
         return rows as AccountGeneralInfo[];
     }
