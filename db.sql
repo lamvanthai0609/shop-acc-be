@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 15, 2025 lúc 12:01 PM
+-- Thời gian đã tạo: Th3 15, 2025 lúc 06:23 PM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.0.30
 
@@ -44,9 +44,9 @@ CREATE TABLE `account_general_information` (
 --
 
 INSERT INTO `account_general_information` (`id`, `images`, `price`, `discount`, `type`, `status`, `categoryId`, `created`, `updated`) VALUES
-(1, 'https://daichientamquoc.mobi//assets/storage/images/465224329_584857157400386_8584976076696333390_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465104538_584857064067062_1709151669985081562_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465121465_584857007400401_5831874833466656644_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465067180_584856944067074_555021768983984206_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465221575_584860887400013_8547054676247229302_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465148214_584860850733350_905072280517992676_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465065129_584860824066686_2017261889986086876_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464778558_584860807400021_3349131020691770697_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464301585_584860730733362_1356892545775769602_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465028991_584860640733371_7326190018253228344_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464802954_584860570733378_8661232016160594823_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464626543_584860490733386_8043412009872589007_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465030276_584860430733392_8080779763693512981_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464625581_584860357400066_3978994037777908872_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465048558_584860297400072_8520348366399490547_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465222423_584860020733433_4230779170667607833_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465445404_584859954066773_1954910718157594856_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464786733_584859900733445_6494359284478624237_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465172063_584859837400118_7294858493379105309_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464327402_584859787400123_6701888605007351821_n.jpg;', 100000.00, 0.00, '\"Đăng Nhập\":\"Thông Tin Đầy Đủ\",\"Máy Chủ\":\"Thông Tin Đầy Đủ\", \"Dạng Nick\":\"...\", \"Cấp NV\":\"...\"', 'Đã bán', 3, '2025-03-15 08:10:16', '2025-03-15 10:33:48'),
-(2, 'https://daichientamquoc.mobi//assets/storage/images/465555332_586334700585965_4539103198723618725_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465579589_586337373919031_7641577682166651534_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465153532_586337343919034_248181686828003140_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465454415_586337317252370_2087346858524477496_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464865755_586337277252374_4730498086447509400_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465223396_586337250585710_6148596264625819315_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465561386_586337230585712_7546854558314434329_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465049036_586337187252383_8042146044690701618_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464579964_586337147252387_4904443592261237228_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465282934_586337133919055_750323412360520128_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464688739_586337100585725_1083313816359047241_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465045589_586337073919061_6181166476977242100_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465010924_586337027252399_4364782340764325892_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464917253_586336980585737_4683627799301242899_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465271920_586336917252410_1559657260404713683_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465223454_586336877252414_1198394896845714506_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465222446_586336820585753_9101346958881389625_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465678128_586336697252432_2070925738456400552_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465415942_586336503919118_4567074171163876719_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464690281_586336427252459_7674407596132002987_n.jpg;', 200000.00, 0.00, '\"Đăng Nhập\":\"Thông Tin Đầy Đủ\",\"Máy Chủ\":\"Thông Tin Đầy Đủ\", \"Dạng Nick\":\"...\", \"Cấp NV\":\"...\"', 'Đã bán', 3, '2025-03-15 08:10:16', '2025-03-15 11:01:02'),
-(3, 'https://daichientamquoc.mobi//assets/storage/images/465554276_586853853867383_5982191623868032137_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465183653_586856573867111_8593050594909021575_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465554099_586856557200446_7317455810111329321_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464689167_586856550533780_2950150618811820728_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465022337_586856533867115_5699494587566091651_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464752131_586856487200453_4938252712320769484_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465022337_586856447200457_6586214214957708537_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465216675_586856407200461_3385721221187955138_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464688390_586856300533805_6382303879053217443_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465368817_586856007200501_4465435954594530795_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465283978_586855837200518_7030567063127734052_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465223337_586855773867191_9100650533847455531_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465676329_586855493867219_2695780248065598453_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464580115_586854957200606_3636858694152474375_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465224854_586854790533956_8584888597979627189_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465465431_586854663867302_3238386278340316659_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464670443_586854497200652_4560798503449139035_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465675247_586854433867325_8114216164957223241_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464580359_586854337200668_2626514468104184618_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465453536_586854277200674_5291091071463876448_n.jpg;', 150000.00, 0.00, '\"Đăng Nhập\":\"Thông Tin Đầy Đủ\",\"Máy Chủ\":\"Thông Tin Đầy Đủ\", \"Dạng Nick\":\"...\", \"Cấp NV\":\"...\"', 'Còn hàng', 3, '2025-03-15 08:10:16', '2025-03-15 08:59:04'),
+(1, 'https://daichientamquoc.mobi//assets/storage/images/465224329_584857157400386_8584976076696333390_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465104538_584857064067062_1709151669985081562_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465121465_584857007400401_5831874833466656644_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465067180_584856944067074_555021768983984206_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465221575_584860887400013_8547054676247229302_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465148214_584860850733350_905072280517992676_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465065129_584860824066686_2017261889986086876_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464778558_584860807400021_3349131020691770697_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464301585_584860730733362_1356892545775769602_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465028991_584860640733371_7326190018253228344_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464802954_584860570733378_8661232016160594823_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464626543_584860490733386_8043412009872589007_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465030276_584860430733392_8080779763693512981_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464625581_584860357400066_3978994037777908872_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465048558_584860297400072_8520348366399490547_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465222423_584860020733433_4230779170667607833_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465445404_584859954066773_1954910718157594856_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464786733_584859900733445_6494359284478624237_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465172063_584859837400118_7294858493379105309_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464327402_584859787400123_6701888605007351821_n.jpg;', 100000.00, 0.00, '\"Đăng Nhập\":\"Thông Tin Đầy Đủ\",\"Máy Chủ\":\"Thông Tin Đầy Đủ\", \"Dạng Nick\":\"...\", \"Cấp NV\":\"...\"', 'Đã bán', 3, '2025-03-15 08:10:16', '2025-03-15 12:38:31'),
+(2, 'https://daichientamquoc.mobi//assets/storage/images/465555332_586334700585965_4539103198723618725_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465579589_586337373919031_7641577682166651534_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465153532_586337343919034_248181686828003140_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465454415_586337317252370_2087346858524477496_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464865755_586337277252374_4730498086447509400_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465223396_586337250585710_6148596264625819315_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465561386_586337230585712_7546854558314434329_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465049036_586337187252383_8042146044690701618_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464579964_586337147252387_4904443592261237228_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465282934_586337133919055_750323412360520128_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464688739_586337100585725_1083313816359047241_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465045589_586337073919061_6181166476977242100_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465010924_586337027252399_4364782340764325892_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464917253_586336980585737_4683627799301242899_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465271920_586336917252410_1559657260404713683_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465223454_586336877252414_1198394896845714506_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465222446_586336820585753_9101346958881389625_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465678128_586336697252432_2070925738456400552_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465415942_586336503919118_4567074171163876719_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464690281_586336427252459_7674407596132002987_n.jpg;', 200000.00, 0.00, '\"Đăng Nhập\":\"Thông Tin Đầy Đủ\",\"Máy Chủ\":\"Thông Tin Đầy Đủ\", \"Dạng Nick\":\"...\", \"Cấp NV\":\"...\"', 'Đã bán', 3, '2025-03-15 08:10:16', '2025-03-15 14:11:18'),
+(3, 'https://daichientamquoc.mobi//assets/storage/images/465554276_586853853867383_5982191623868032137_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465183653_586856573867111_8593050594909021575_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465554099_586856557200446_7317455810111329321_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464689167_586856550533780_2950150618811820728_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465022337_586856533867115_5699494587566091651_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464752131_586856487200453_4938252712320769484_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465022337_586856447200457_6586214214957708537_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465216675_586856407200461_3385721221187955138_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464688390_586856300533805_6382303879053217443_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465368817_586856007200501_4465435954594530795_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465283978_586855837200518_7030567063127734052_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465223337_586855773867191_9100650533847455531_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465676329_586855493867219_2695780248065598453_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464580115_586854957200606_3636858694152474375_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465224854_586854790533956_8584888597979627189_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465465431_586854663867302_3238386278340316659_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464670443_586854497200652_4560798503449139035_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465675247_586854433867325_8114216164957223241_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464580359_586854337200668_2626514468104184618_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465453536_586854277200674_5291091071463876448_n.jpg;', 150000.00, 0.00, '\"Đăng Nhập\":\"Thông Tin Đầy Đủ\",\"Máy Chủ\":\"Thông Tin Đầy Đủ\", \"Dạng Nick\":\"...\", \"Cấp NV\":\"...\"', 'Đã bán', 3, '2025-03-15 08:10:16', '2025-03-15 14:13:52'),
 (4, 'https://daichientamquoc.mobi//assets/storage/images/465656806_589759007044768_4666099603618353853_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465721326_589759050378097_4466114679659738074_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465640828_589759013711434_6906562788905997085_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465465420_589759170378085_6852404200091401916_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465698412_589759040378098_7766965987166529470_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465604997_589759153711420_6818744736189864597_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465453013_589759113711424_8884051387188080496_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465568042_589759073711428_6307074714855638097_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465655824_589759087044760_8091099650781053329_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465563460_589759137044755_5647594889221298287_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465501338_589759107044758_3350652165136935842_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465656806_589759007044768_4666099603618353853_n.jpg;', 120000.00, 0.00, '\"Đăng Nhập\":\"Thông Tin Đầy Đủ\",\"Máy Chủ\":\"Thông Tin Đầy Đủ\", \"Dạng Nick\":\"...\", \"Cấp NV\":\"...\"', 'Còn hàng', 3, '2025-03-15 08:10:16', '2025-03-15 08:59:34'),
 (5, 'https://daichientamquoc.mobi//assets/storage/images/465060314_1098374141939275_2556004001830152607_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465054122_1098374271939262_8782768375388729845_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464626244_1098374218605934_1901521485200506412_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464705755_1098374285272594_7314710475796979376_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464705004_1098374321939257_8030205671294327083_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465020740_1098374451939244_8096014175318280303_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464788845_1098374465272576_8853388006581358497_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464625406_1098374358605920_3760699563207286627_n.jpg;https://daichientamquoc.mobi//assets/storage/images/464789937_1098374315272591_1527079321101433303_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465271325_1098374228605933_1449739034965241968_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465110460_1098374368605919_5094594964949556123_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465062054_1098374168605939_3593280325176345386_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465060314_1098374141939275_2556004001830152607_n.jpg;', 250000.00, 0.00, '\"Đăng Nhập\":\"Thông Tin Đầy Đủ\",\"Máy Chủ\":\"Thông Tin Đầy Đủ\", \"Dạng Nick\":\"...\", \"Cấp NV\":\"...\"', 'Còn hàng', 3, '2025-03-15 08:10:16', '2025-03-15 08:59:34'),
 (6, 'https://daichientamquoc.mobi//assets/storage/images/465815224_2888124594697179_7091309306395147734_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465787459_2888124881363817_7710109048429571644_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465787837_2888124768030495_56943077835710484_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465812634_2888124864697152_5620157786131601215_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465781922_2888124758030496_4311449982831198077_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465451829_2888124911363814_5698300386513721165_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465755874_2888124601363845_2580828917641452327_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465403009_2888124858030486_7892810419769125522_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465786903_2888124928030479_4687626304537917934_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465587520_2888124808030491_4655856814437278377_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465663740_2888124894697149_5251939748991027874_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465783961_2888124821363823_2913164281375710206_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465452914_2888124844697154_7403599237500657036_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465649862_2888124688030503_8533440410360499308_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465781997_2888124801363825_3330250191873022212_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465760430_2888124791363826_509172733158606647_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465760498_2888124708030501_8779588718727287878_n.jpg;https://daichientamquoc.mobi//assets/storage/images/465815224_2888124594697179_7091309306395147734_n.jpg;', 180000.00, 0.00, '\"Đăng Nhập\":\"Thông Tin Đầy Đủ\",\"Máy Chủ\":\"Thông Tin Đầy Đủ\", \"Dạng Nick\":\"...\", \"Cấp NV\":\"...\"', 'Còn hàng', 3, '2025-03-15 08:10:16', '2025-03-15 08:59:34'),
@@ -68,6 +68,20 @@ CREATE TABLE `account_specific_information` (
   `accountId` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `account_specific_information`
+--
+
+INSERT INTO `account_specific_information` (`id`, `username`, `password`, `accountId`) VALUES
+(1, 'daichien123', 'daichien', 1),
+(2, 'test123123', 'test123123', 2),
+(3, 'test12878', 'test12878', 3),
+(4, 'trsdfds', 'sdfdsf', 4),
+(5, 'vbcvbcvb', 'cvbcvbcs', 5),
+(6, 'sdajgfjgh', 'dasdaasdas', 6),
+(7, 'ouioiuoui', 'uiouiouiou', 7),
+(8, 'TEssttrr', 'dfsfsefsdf', 8);
+
 -- --------------------------------------------------------
 
 --
@@ -79,6 +93,8 @@ CREATE TABLE `categories` (
   `name` varchar(255) NOT NULL,
   `slug` varchar(255) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
+  `sold` double NOT NULL,
+  `totalAccount` double NOT NULL,
   `created` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -87,12 +103,12 @@ CREATE TABLE `categories` (
 -- Đang đổ dữ liệu cho bảng `categories`
 --
 
-INSERT INTO `categories` (`id`, `name`, `slug`, `image`, `created`, `updated`) VALUES
-(3, 'Tài Khoản Tam Quốc', 'tai-khoan-tam-quoc', NULL, '2025-03-15 07:54:01', '2025-03-15 07:54:01'),
-(4, 'Acc Zin 50 Lông', 'acc-zin-50-long', NULL, '2025-03-15 07:54:01', '2025-03-15 07:54:01'),
-(5, 'Acc Tam Quốc Vip', 'acc-tam-quoc-vip', NULL, '2025-03-15 07:54:20', '2025-03-15 07:54:20'),
-(6, 'Free Fire', 'free-fire-online', NULL, '2025-03-15 07:54:20', '2025-03-15 07:54:20'),
-(7, 'Liên Quân Mobile', 'lien-quan-mobile', NULL, '2025-03-15 07:54:31', '2025-03-15 07:54:31');
+INSERT INTO `categories` (`id`, `name`, `slug`, `image`, `sold`, `totalAccount`, `created`, `updated`) VALUES
+(3, 'Tài Khoản Tam Quốc', 'tai-khoan-tam-quoc', 'https://res.cloudinary.com/ducw36fi3/image/upload/v1742052289/anh1_qotsjk.jpg', 2865, 181, '2025-03-15 07:54:01', '2025-03-15 15:29:15'),
+(4, 'Acc Kim Nguyên Bảo', 'acc-kim-nguyen-bao', 'https://res.cloudinary.com/ducw36fi3/image/upload/v1742052295/anh2_btlkfj.jpg', 70771, 5925, '2025-03-15 07:54:01', '2025-03-15 15:29:26'),
+(5, 'Acc Tam Quốc Vip', 'acc-tam-quoc-vip', 'https://res.cloudinary.com/ducw36fi3/image/upload/v1742052290/anh3_gnpiqy.jpg', 48077, 207, '2025-03-15 07:54:20', '2025-03-15 15:29:36'),
+(6, 'Free Fire', 'free-fire-online', 'https://res.cloudinary.com/ducw36fi3/image/upload/v1742052288/ff_qbs6m7.jpg', 8202, 0, '2025-03-15 07:54:20', '2025-03-15 15:29:37'),
+(7, 'Liên Quân Mobile', 'lien-quan-mobile', 'https://res.cloudinary.com/ducw36fi3/image/upload/v1742052320/lqmb_r2nbxs.png', 3333, 0, '2025-03-15 07:54:31', '2025-03-15 15:29:43');
 
 -- --------------------------------------------------------
 
@@ -133,8 +149,22 @@ CREATE TABLE `recharges` (
 
 CREATE TABLE `services` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL
+  `name` varchar(255) NOT NULL,
+  `image` text NOT NULL,
+  `slug` varchar(255) NOT NULL,
+  `totalTransaction` double NOT NULL,
+  `created` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `services`
+--
+
+INSERT INTO `services` (`id`, `name`, `image`, `slug`, `totalTransaction`, `created`, `updated`) VALUES
+(1, 'Bán avartar', 'https://res.cloudinary.com/ducw36fi3/image/upload/v1742053440/anh5_kygdm5.jpg', 'ban-avartar', 145, '2025-03-15 15:41:25', '2025-03-15 15:45:06'),
+(2, 'Làm nhiệm vụ vương giả quy lai', 'https://res.cloudinary.com/ducw36fi3/image/upload/v1742054482/anh4-min_ccemjk.jpg', 'lam-nhiem-vu-vuong-gia-quy-lai', 350, '2025-03-15 15:41:25', '2025-03-15 16:01:38'),
+(4, 'Bán thẻ chiết khấu', 'https://res.cloudinary.com/ducw36fi3/image/upload/v1742053436/anh6_fbmqds.jpg', 'ban-the-chiet-khau', 675, '2025-03-15 15:43:02', '2025-03-15 15:44:47');
 
 -- --------------------------------------------------------
 
@@ -159,8 +189,9 @@ CREATE TABLE `transactions` (
 --
 
 INSERT INTO `transactions` (`id`, `userId`, `type`, `accountId`, `serviceId`, `amount`, `finalBalance`, `created`, `updated`) VALUES
-(1, 1, 'Mua Account', 1, NULL, 100000.00, 900000.00, '2025-03-15 10:33:48', '2025-03-15 10:33:48'),
-(2, 1, 'Mua Account', 2, NULL, 200000.00, 700000.00, '2025-03-15 11:01:02', '2025-03-15 11:01:02');
+(9, 1, 'Mua Account', 1, NULL, 100000.00, 900000.00, '2025-03-15 12:38:31', '2025-03-15 12:38:31'),
+(10, 1, 'Mua Account', 2, NULL, 200000.00, 700000.00, '2025-03-15 14:11:18', '2025-03-15 14:11:18'),
+(11, 1, 'Mua Account', 3, NULL, 150000.00, 550000.00, '2025-03-15 14:13:52', '2025-03-15 14:13:52');
 
 -- --------------------------------------------------------
 
@@ -187,7 +218,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `name`, `email`, `balance`, `numberPhone`, `status`, `role`, `created`, `updated`) VALUES
-(1, 'lamvanthai0609', '48a1713fcf8d56d51a2f5dbcb0194316', 'Lâm Văn Thái', 'lamvanthai0609@gmail.com', 700000.00, '0987654321', 'ACTIVE', 'USER', '2025-03-15 07:37:19', '2025-03-15 11:01:02');
+(1, 'lamvanthai0609', '48a1713fcf8d56d51a2f5dbcb0194316', 'Lâm Văn Thái', 'lamvanthai0609@gmail.com', 50000.00, '0987654321', 'ACTIVE', 'USER', '2025-03-15 07:37:19', '2025-03-15 17:00:16');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -264,7 +295,7 @@ ALTER TABLE `account_general_information`
 -- AUTO_INCREMENT cho bảng `account_specific_information`
 --
 ALTER TABLE `account_specific_information`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `categories`
@@ -288,13 +319,13 @@ ALTER TABLE `recharges`
 -- AUTO_INCREMENT cho bảng `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
