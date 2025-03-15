@@ -4,8 +4,12 @@ import { User } from './user.entity';
 import { UserModel } from './user.model';
 
 export class UserService extends GeneralService<User> {
+    private userModel: UserModel;
+
     constructor() {
-        super(new UserModel());
+        const userModel = new UserModel();
+        super(userModel);
+        this.userModel = userModel;
     }
 
     async save(data: Partial<User>): Promise<number> {
@@ -17,5 +21,9 @@ export class UserService extends GeneralService<User> {
     async update(id: number, data: Partial<User>): Promise<boolean> {
         const userDTO = new UpdateUserDto(data);
         return super.update(id, userDTO);
+    }
+
+    async updateBalance(id: number, balance: number): Promise<boolean> {
+        return await this.userModel.updateBalance(id, balance);
     }
 }

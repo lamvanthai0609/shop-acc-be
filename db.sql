@@ -16,17 +16,17 @@ CREATE TABLE categories (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     image VARCHAR(255),
+    slug VARCHAR(255) UNIQUE NOT NULL,
     created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+
 CREATE TABLE account_general_information (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    priceAtm DECIMAL(10,2) NOT NULL,
-    priceCard DECIMAL(10,2) NOT NULL,
+    images TEXT DEFAULT '',
+    price DECIMAL(10,2) NOT NULL DEFAULT 0.00,
     discount DECIMAL(5,2) DEFAULT 0.00,
-    username VARCHAR(255) NOT NULL,
     type VARCHAR(255) NOT NULL,
     status ENUM('Còn hàng', 'Đã bán') NOT NULL DEFAULT 'Còn hàng', 
     categoryId INT,
@@ -85,3 +85,13 @@ CREATE TABLE transactions (
     FOREIGN KEY (serviceId) REFERENCES services(id) ON DELETE SET NULL
 );
 
+
+
+
+
+INSERT INTO categories (name, image, slug) VALUES
+('Tài Khoản Tam Quốc', NULL, 'tai-khoan-tam-quoc'),
+('Acc Zin 50 Lông', NULL, 'acc-zin-50-long'),
+('Acc Tam Quốc Vip', NULL, 'acc-tam-quoc-vip'),
+('Free Fire', NULL, 'free-fire-online'), 
+('Liên Quân Mobile', NULL, 'lien-quan-mobile');

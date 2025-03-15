@@ -1,10 +1,8 @@
 export interface AccountGeneralInfo {
     id: number;
-    name: string;
-    priceAtm: number;
-    priceCard: number;
+    images: string[];
+    price: number;
     discount: number;
-    username: string;
     type: string;
     status: 'Còn hàng' | 'Đã bán';
     categoryId: number | null;

@@ -1,13 +1,21 @@
 import { Table } from '@/libs/utils/constant';
-import { NextFunction, Request, Response, Router } from 'express';
+import {
+    NextFunction,
+    Request,
+    RequestHandler,
+    Response,
+    Router,
+} from 'express';
 import express from 'express';
 import {
+    accountGeneralInfoController,
     AccountGeneralInfoController,
     AccountSpecificInfoController,
     CategoryController,
     ImageController,
     RechargeController,
     ServiceController,
+    transactionController,
     TransactionController,
     userController,
     UserController,
@@ -105,10 +113,21 @@ const listTableAuthenticate = [
 
 router.post('/auth/login', authController.login);
 router.post('/auth/register', authController.register);
+router.get(
+    '/account/:slug',
+    accountGeneralInfoController.getAccountByCategorySlug
+);
+router.get('/account/detail/:id', accountGeneralInfoController.findById);
 
 const authenticate = (req: Request, res: Response, next: NextFunction) => {
     authMiddleware.authenticate(req, res, next);
 };
+
+router.post(
+    '/user/buy-account',
+    authenticate,
+    transactionController.postBuyAccount as unknown as RequestHandler
+);
 
 const authorize = (req: Request, res: Response, next: NextFunction) => {
     authMiddleware.authorize(req, res, next);

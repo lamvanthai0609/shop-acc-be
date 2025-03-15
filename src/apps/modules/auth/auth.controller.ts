@@ -13,7 +13,7 @@ class AuthController {
     }
 
     public async login(
-        req: Request<LoginRequest>,
+        req: Request<{}, {}, LoginRequest>,
         res: Response<LoginResponse>
     ) {
         try {

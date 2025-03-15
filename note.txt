@@ -1,0 +1,7 @@
+,
+    // "_moduleAliases": {
+    //     "@": "./dist"
+    // }
+
+
+    thêm đoạn này vào pakagejson để chạy build
