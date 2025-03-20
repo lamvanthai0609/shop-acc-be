@@ -1,3 +1,5 @@
+import { AccountSpecificInfo } from '../account-specific-info/account-specific-info.entity';
+
 export interface AccountGeneralInfo {
     id: number;
     images: string[];
@@ -9,3 +11,5 @@ export interface AccountGeneralInfo {
     created: Date;
     updated: Date;
 }
+
+export type Account = AccountGeneralInfo & AccountSpecificInfo;

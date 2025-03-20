@@ -13,6 +13,8 @@ export class AccountGeneralInfoController extends GeneralController<AccountGener
         this.accountGeneralInfoService = accountGeneralInfoService;
         this.getAccountByCategorySlug =
             this.getAccountByCategorySlug.bind(this);
+        this.getAccounts = this.getAccounts.bind(this);
+        this.updateData = this.updateData.bind(this);
     }
 
     public async getAccountByCategorySlug(req: Request, res: Response) {
@@ -22,6 +24,38 @@ export class AccountGeneralInfoController extends GeneralController<AccountGener
                 await this.accountGeneralInfoService.getAccountByCategorySlug(
                     slug
                 );
+            ResponseApp.ok(res, data);
+        } catch (error) {
+            ResponseApp.failed(res, error as IAppError);
+        }
+    }
+
+    public async getAccounts(req: Request, res: Response) {
+        try {
+            const data = await this.accountGeneralInfoService.getAccounts();
+            ResponseApp.ok(res, data);
+        } catch (error) {
+            ResponseApp.failed(res, error as IAppError);
+        }
+    }
+
+    public async updateData(req: Request, res: Response) {
+        try {
+            const id = Number(req.params.accountId);
+            const data = await this.accountGeneralInfoService.updateData(
+                id,
+                req.body
+            );
+            ResponseApp.ok(res, data);
+        } catch (error) {
+            ResponseApp.failed(res, error as IAppError);
+        }
+    }
+
+    public async delete(req: Request, res: Response) {
+        try {
+            const id = Number(req.params.accountId);
+            const data = await this.accountGeneralInfoService.delete(id);
             ResponseApp.ok(res, data);
         } catch (error) {
             ResponseApp.failed(res, error as IAppError);

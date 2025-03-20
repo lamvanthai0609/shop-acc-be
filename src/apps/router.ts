@@ -139,6 +139,34 @@ router.post(
 router.get('/user/transaction', authenticate, transactionController.findByUser);
 router.get('/user', authenticate, userController.findById);
 
+router.get(
+    '/admin/accounts',
+    authenticate,
+    authorize,
+    accountGeneralInfoController.getAccounts
+);
+
+router.post(
+    '/admin/accounts',
+    authenticate,
+    authorize,
+    accountGeneralInfoController.save
+);
+
+router.patch(
+    '/admin/accounts/:accountId',
+    authenticate,
+    authorize,
+    accountGeneralInfoController.updateData
+);
+
+router.delete(
+    '/admin/accounts/:accountId',
+    authenticate,
+    authorize,
+    accountGeneralInfoController.delete
+);
+
 export const routers = (app: Router) => {
     app.use('/api', router);
 };
