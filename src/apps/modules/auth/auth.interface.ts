@@ -22,3 +22,9 @@ export interface TokenPayload {
     username: string;
     role: string;
 }
+
+export interface ChangePasswordRequest {
+    userId: number;
+    oldPassword: string;
+    newPassword: string;
+}

@@ -10,6 +10,7 @@ class AuthController {
         this.authService = new AuthService();
         this.login = this.login.bind(this);
         this.register = this.register.bind(this);
+        this.changePassword = this.changePassword.bind(this);
     }
 
     public async login(
@@ -32,6 +33,20 @@ class AuthController {
         try {
             const payload = req.body;
             const data = await this.authService.register(payload);
+            ResponseApp.ok(res, data);
+        } catch (error) {
+            ResponseApp.failed(res, error as IAppError);
+        }
+    }
+
+    public async changePassword(req: Request, res: Response) {
+        try {
+            const payload = req.body;
+            const userId = req.params.userId;
+            const data = await this.authService.changePassword(
+                Number(userId),
+                payload
+            );
             ResponseApp.ok(res, data);
         } catch (error) {
             ResponseApp.failed(res, error as IAppError);

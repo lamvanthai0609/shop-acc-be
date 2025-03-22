@@ -26,4 +26,10 @@ export class UserService extends GeneralService<User> {
     async updateBalance(id: number, balance: number): Promise<boolean> {
         return await this.userModel.updateBalance(id, balance);
     }
+
+    async updatePassword(id: number, password: string): Promise<boolean> {
+        return await super.update(id, {
+            password: password,
+        });
+    }
 }

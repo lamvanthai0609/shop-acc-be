@@ -4,7 +4,7 @@ import { ResponseApp } from '@/libs/utils/response';
 import { Forbidden, IAppError, Unauthorized } from '@/libs/utils/error';
 import { Role } from '../modules';
 
-class AuthMiddleware {
+export class AuthMiddleware {
     private authService: AuthService;
     constructor() {
         this.authService = new AuthService();
@@ -24,7 +24,7 @@ class AuthMiddleware {
             const decodeTokenData = await this.authService.verifyToken(
                 tokenData
             );
-            req.params.id = decodeTokenData.id.toString();
+            req.params.userId = decodeTokenData.id.toString();
             next();
         } catch (error) {
             ResponseApp.failed(res, error as IAppError, 401);

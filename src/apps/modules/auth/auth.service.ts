@@ -6,6 +6,7 @@ import {
     UsernameRequired,
 } from './auth.error';
 import {
+    ChangePasswordRequest,
     LoginRequest,
     LoginResponse,
     RegisterRequest,
@@ -145,5 +146,38 @@ export class AuthService {
                 accessToken,
             },
         };
+    }
+
+    public async changePassword(
+        userId: number,
+        payload: ChangePasswordRequest
+    ) {
+        const { oldPassword, newPassword } = payload;
+
+        if (userId !== payload.userId) {
+            throw new AppError(
+                'Không thể thay đổi mật khẩu của người khác',
+                400
+            );
+        }
+
+        if (!oldPassword || !newPassword) {
+            throw new AppError('Thiếu thông tin', 400);
+        }
+
+        const user = await this.userService.findById(userId);
+
+        if (!user) {
+            throw new AppError('Tài khoản không tồn tại', 400);
+        }
+
+        const oldPasswordHash = this.hash(oldPassword);
+        if (oldPasswordHash !== user.password) {
+            throw new AppError('Mật khẩu cũ không đúng', 400);
+        }
+
+        const newPasswordHash = this.hash(newPassword);
+
+        return await this.userService.updatePassword(userId, newPasswordHash);
     }
 }

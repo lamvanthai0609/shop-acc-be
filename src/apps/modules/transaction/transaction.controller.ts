@@ -45,7 +45,7 @@ export class TransactionController extends GeneralController<Transaction> {
         try {
             const params = req.params;
             const data = await this.transactionService.findByUser(
-                Number(params.id || 0)
+                Number(params.userId || 0)
             );
             ResponseApp.ok(res, data);
         } catch (error) {
