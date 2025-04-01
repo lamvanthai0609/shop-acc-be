@@ -13,6 +13,8 @@ export class RechargeController extends GeneralController<Recharge> {
         this.rechargeService = rechargeService;
         this.updateStatus = this.updateStatus.bind(this);
         this.findByUser = this.findByUser.bind(this);
+        this.getTop5UserRechargeInMonth =
+            this.getTop5UserRechargeInMonth.bind(this);
     }
 
     public async updateStatus(req: Request, res: Response) {
@@ -34,6 +36,15 @@ export class RechargeController extends GeneralController<Recharge> {
             const result = await this.rechargeService.findByUser(
                 Number(userId)
             );
+            ResponseApp.ok(res, result);
+        } catch (error) {
+            ResponseApp.failed(res, error as IAppError);
+        }
+    }
+
+    public async getTop5UserRechargeInMonth(req: Request, res: Response) {
+        try {
+            const result = await this.rechargeService.top5UserRechargeInMonth();
             ResponseApp.ok(res, result);
         } catch (error) {
             ResponseApp.failed(res, error as IAppError);

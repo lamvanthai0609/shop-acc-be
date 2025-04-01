@@ -6,7 +6,7 @@ import {
     RechargeNetworkType,
     RechargeStatus,
 } from './recharge.entity';
-import { RechargeRequest } from './recharge.interface';
+import { RechargeRequest, Top5UserRechargeInMonth } from './recharge.interface';
 import { RechargeModel } from './recharge.model';
 import { MySQLTransaction } from '../common/transactiondb';
 import { UserService } from '../user';
@@ -192,5 +192,15 @@ export class RechargeService extends GeneralService<Recharge> {
 
     public async findByUser(userId: number): Promise<Recharge[]> {
         return await this.rechargeModel.findByFields({ userId });
+    }
+
+    public async top5UserRechargeInMonth(): Promise<Top5UserRechargeInMonth[]> {
+        const users = await this.rechargeModel.top5UserRechargeInMonth();
+        const usersHashUsername = users.map((user) => ({
+            ...user,
+            username: user.username.slice(0, -3) + '***',
+        }));
+
+        return usersHashUsername;
     }
 }

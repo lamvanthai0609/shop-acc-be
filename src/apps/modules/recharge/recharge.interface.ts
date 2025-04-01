@@ -25,3 +25,10 @@ export type RechargeRequest =
           cardCode: string;
           status: RechargeStatus.PENDING;
       });
+
+export interface Top5UserRechargeInMonth {
+    username: string;
+    totalAmount: number;
+    totalRecharges: number;
+    month: number;
+}

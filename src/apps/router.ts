@@ -105,6 +105,10 @@ router.patch(
 );
 
 router.get('/user/recharge', authenticate, rechargeController.findByUser);
+router.get(
+    '/admin/recharge/top5-user-recharge-in-month',
+    rechargeController.getTop5UserRechargeInMonth
+);
 router.get('/admin/recharge', authenticate, authorize, rechargeController.find);
 
 router.get('/admin/users', authenticate, authorize, userController.find);
