@@ -12,12 +12,27 @@ export class UserController extends GeneralController<User> {
         super(userService);
         this.userService = userService;
         this.findById = this.findById.bind(this);
+        this.changeStatus = this.changeStatus.bind(this);
     }
 
     async findById(req: Request, res: Response) {
         try {
             const id = req.params.userId;
             const user = await this.userService.findById(Number(id));
+            ResponseApp.ok(res, user);
+        } catch (error) {
+            ResponseApp.failed(res, error as IAppError);
+        }
+    }
+
+    async changeStatus(req: Request, res: Response) {
+        try {
+            const id = req.params.id;
+            const status = req.body.status;
+            const user = await this.userService.changeStatus(
+                Number(id),
+                status
+            );
             ResponseApp.ok(res, user);
         } catch (error) {
             ResponseApp.failed(res, error as IAppError);

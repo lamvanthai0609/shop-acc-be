@@ -1,6 +1,7 @@
 import { GeneralService } from '../general';
 import { CreateUserDto, UpdateUserDto } from './user.dto';
 import { User } from './user.entity';
+import { UserStatus } from './user.enum';
 import { UserModel } from './user.model';
 
 export class UserService extends GeneralService<User> {
@@ -14,7 +15,6 @@ export class UserService extends GeneralService<User> {
 
     async save(data: Partial<User>): Promise<number> {
         const userDTO = new CreateUserDto(data);
-        console.log('userDTO', userDTO);
         return super.save(userDTO);
     }
 
@@ -30,6 +30,21 @@ export class UserService extends GeneralService<User> {
     async updatePassword(id: number, password: string): Promise<boolean> {
         return await super.update(id, {
             password: password,
+        });
+    }
+
+    async changeStatus(id: number, status: UserStatus): Promise<boolean> {
+        if (!Object.values(UserStatus).includes(status)) {
+            throw new Error('Invalid status value');
+        }
+
+        const user = await this.userModel.findById(id);
+        if (!user) {
+            throw new Error('User not found');
+        }
+
+        return await super.update(id, {
+            status: status,
         });
     }
 }

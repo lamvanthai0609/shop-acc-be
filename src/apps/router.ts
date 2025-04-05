@@ -120,6 +120,13 @@ router.post(
     rechargeController.save
 );
 
+router.patch(
+    '/admin/users/changestatus/:id',
+    authenticate,
+    authorize,
+    userController.changeStatus
+);
+
 export const routers = (app: Router) => {
     app.use('/api', router);
 };
